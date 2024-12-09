@@ -1,0 +1,39 @@
+POST http://localhost:5002/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "pushpa112",
+  "password": "12345678"
+}
+###
+POST http://localhost:5002/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "pushpa",
+  "password": "12345678"
+}
+###
+POST http://localhost:5002/api/tasks
+Content-Type: application/json
+
+{
+  "title": "second task",
+  "description": "12345678",
+  "status":"In Progress",
+  "userId":1
+}
+
+###
+GET http://localhost:5002/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzNzQ5NzM5LCJleHAiOjE3MzM3NTMzMzl9.aklTNrb6Px2cv555D6EtXJOPoKd9JCXypQ-Yz1jxMjQ
+
+
+###
+DELETE http://localhost:5002/api/tasks/1
+
+### 
+PUT http://localhost:5002/api/tasks/4
+Content-Type: application/json
+
+{ "status": "Completed" }
